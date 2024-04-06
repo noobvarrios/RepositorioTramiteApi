@@ -24,25 +24,32 @@ class PersonaController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $persona = new Persona; 
+        $persona->nombre = $request->nombre; 
+        $persona->correo = $request->correo; 
+        $persona->telefono = $request->telefono; 
+        $persona->direccion = $request->direccion; 
+        $persona->save(); 
+        $data = [
+            'message' => 'La persona se agrego exitosamente. ', 
+            'persona' => $persona
+        ]; 
+        return response()->json($data); 
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Persona $persona)
+    public function show($personaid)
     {
-        //
+        $persona = Persona::find($personaid);
+        if (!$persona) {
+            return response()->json(['error' => 'No se encontró la persona'], 404);
+        }
+
+        return response()->json($persona);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(Persona $persona)
     {
         //
@@ -51,16 +58,42 @@ class PersonaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Persona $persona)
+    public function update(Request $request, $personaid)
     {
-        //
+        $persona = Persona::findOrFail($personaid);
+    
+        $persona->nombre = $request->nombre;
+        $persona->correo = $request->correo;
+        $persona->telefono = $request->telefono;
+        $persona->direccion = $request->direccion;
+        $persona->save();
+    
+        $data = [
+            'message' => 'La persona se actualizó exitosamente.',
+            'persona' => $persona
+        ];
+    
+        return response()->json($data);
     }
+    
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Persona $persona)
+    public function destroy($personaid)
     {
-        //
+        $persona = Persona::find($personaid);
+        if (!$persona) {
+            return response()->json(['error' => 'No se encontró la persona'], 404);
+        }
+        else{
+            $persona->delete();
+            $data = [
+                'message' => 'La persona se borró exitosamente.',
+                'persona' => $persona
+            ];
+            return response()->json($data);
+        }
     }
+    
 }

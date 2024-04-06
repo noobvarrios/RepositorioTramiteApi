@@ -18,5 +18,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/personasindex', 'App\Http\Controllers\PersonaController@index'); 
+Route::get('/personas-index', 'App\Http\Controllers\PersonaController@index'); 
+Route::post('/agregar-persona', 'App\Http\Controllers\PersonaController@store'); 
+Route::get('/buscar-persona/{personaid}', 'App\Http\Controllers\PersonaController@show'); 
+Route::put('/actualizar-persona/{personaid}', 'App\Http\Controllers\PersonaController@update'); 
+Route::delete('/borrar-persona/{personaid}', 'App\Http\Controllers\PersonaController@destroy'); 
+
+
+
+
+
+
 Route::get('/tramitesindex', 'App\Http\Controllers\TramiteController@index'); 

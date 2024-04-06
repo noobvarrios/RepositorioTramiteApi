@@ -28,17 +28,7 @@ class TramiteController extends Controller
      */
     public function store(Request $request)
     {
-        $persona = new Persona; 
-        $persona->nombre = $request->nombre; 
-        $persona->correo = $request->correo; 
-        $persona->telefono = $request->telefono; 
-        $persona->direccion = $request->direccion; 
-        $persona->save(); 
-        $data = [
-            'message' => 'La persona se agrego exitosamente. ', 
-            'persona' => $persona
-        ]; 
-        return response()->json($data); 
+        
     }
 
     /**
@@ -46,7 +36,7 @@ class TramiteController extends Controller
      */
     public function show(Tramite $tramite)
     {
-        //
+        
     }
 
     /**
