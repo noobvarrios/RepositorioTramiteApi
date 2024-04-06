@@ -28,15 +28,34 @@ class TramiteController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $tramite = new Tramite(); 
+        $tramite->nombre = $request->nombre; 
+        $tramite->descripcion = $request->descripcion; 
+        $tramite->precio = $request->precio; 
+        $tramite->estado =  $request->estado; 
+        $tramite->fecha_inicio = $request->fecha_inicio; 
+        $tramite->fecha_fin = $request->fecha_fin; 
+        $tramite->save(); 
+        $data = [
+            'message' => 'Tramite Añadido Correctamente',
+            'Tramite' => $tramite 
+        ]; 
+
+        return response()->json($tramite); 
+    
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Tramite $tramite)
+    public function show($tramiteid)
     {
-        
+        $tramite = Tramite::find($tramiteid);
+        if (!$tramite) {
+            return response()->json(['error' => 'No se encontró el Tramite'], 404);
+        }
+
+        return response()->json($tramite);
     }
 
     /**
@@ -44,22 +63,45 @@ class TramiteController extends Controller
      */
     public function edit(Tramite $tramite)
     {
-        //
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Tramite $tramite)
+    public function update(Request $request, $tramiteid)
     {
-        //
+        $tramite = Tramite::findOrFail($tramiteid);
+        
+        $tramite->nombre = $request->nombre; 
+        $tramite->descripcion = $request->descripcion; 
+        $tramite->precio = $request->precio; 
+        $tramite->estado =  $request->estado; 
+        $tramite->fecha_inicio = $request->fecha_inicio; 
+        $tramite->fecha_fin = $request->fecha_fin; 
+        $tramite->save(); 
+
+        $data = [
+            'message' => 'Tramite se actualizo correctamente',
+            'tramite' => $tramite 
+        ]; 
+
+        return response()->json($data); 
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Tramite $tramite)
+    public function destroy($tramiteid)
     {
-        //
+        $tramite = Tramite::find($tramiteid);
+        if (!$tramite) {
+            return response()->json(['error' => 'No se encontró el tramite'], 404);
+        }
+        else{
+            $tramite->delete();
+            $data = [
+                'message' => 'El tramite se borró exitosamente.',
+                'tramite' => $tramite
+            ];
+            return response()->json($data);
+        }
     }
 }
