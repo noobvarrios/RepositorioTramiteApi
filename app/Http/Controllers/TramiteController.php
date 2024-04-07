@@ -68,8 +68,12 @@ class TramiteController extends Controller
 
     public function update(Request $request, $tramiteid)
     {
-        $tramite = Tramite::findOrFail($tramiteid);
+        $tramite = Tramite::find($tramiteid);
         
+        if (!$tramite) {
+            return response()->json(['message' => 'No se encontró el trámite'], 404);
+        }
+    
         $tramite->nombre = $request->nombre; 
         $tramite->descripcion = $request->descripcion; 
         $tramite->precio = $request->precio; 
@@ -77,14 +81,15 @@ class TramiteController extends Controller
         $tramite->fecha_inicio = $request->fecha_inicio; 
         $tramite->fecha_fin = $request->fecha_fin; 
         $tramite->save(); 
-
+    
         $data = [
-            'message' => 'Tramite se actualizo correctamente',
+            'message' => 'Trámite se actualizó correctamente',
             'tramite' => $tramite 
         ]; 
-
+    
         return response()->json($data); 
     }
+    
 
     /**
      * Remove the specified resource from storage.

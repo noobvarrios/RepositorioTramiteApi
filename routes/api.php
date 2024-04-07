@@ -26,7 +26,6 @@ Route::delete('/borrar-persona/{personaid}', 'App\Http\Controllers\PersonaContro
 
 Route::post('/persona/tramite', 'App\Http\Controllers\PersonaController@agregarServicio'); 
 
-
 Route::get('/mostrar-tramites', 'App\Http\Controllers\TramiteController@index'); 
 Route::post('/agregar-tramite', 'App\Http\Controllers\TramiteController@store'); 
 Route::get('/buscar-tramite/{tramiteid}', 'App\Http\Controllers\TramiteController@show'); 
