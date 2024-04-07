@@ -24,11 +24,13 @@ Route::get('/buscar-persona/{personaid}', 'App\Http\Controllers\PersonaControlle
 Route::put('/actualizar-persona/{personaid}', 'App\Http\Controllers\PersonaController@update'); 
 Route::delete('/borrar-persona/{personaid}', 'App\Http\Controllers\PersonaController@destroy'); 
 
+Route::post('/persona/tramite', 'App\Http\Controllers\PersonaController@agregarServicio'); 
+
+
 Route::get('/mostrar-tramites', 'App\Http\Controllers\TramiteController@index'); 
 Route::post('/agregar-tramite', 'App\Http\Controllers\TramiteController@store'); 
 Route::get('/buscar-tramite/{tramiteid}', 'App\Http\Controllers\TramiteController@show'); 
-
 Route::put('/actualizar-tramite/{tramiteid}', 'App\Http\Controllers\TramiteController@update'); 
-
 Route::delete('/borrar-tramite/{tramiteid}', 'App\Http\Controllers\TramiteController@destroy'); 
+
 

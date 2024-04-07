@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Persona;
+use App\Models\Tramite;
 use Illuminate\Http\Request;
 
 class PersonaController extends Controller
@@ -95,5 +96,61 @@ class PersonaController extends Controller
             return response()->json($data);
         }
     }
+
+    /*
+    public function agregarServicio(Request $request, Persona $persona)
+    {
+        $persona = Persona::find($request->personaid); 
+        $persona -> tramites()->attach($request->tramiteid); 
+        $data = [
+            'message' => 'Relacionado Correctamente.', 
+            'persona' => $persona
+        ]; 
+
+        return response()->json($data); 
+    }
     
+
+    public function agregarServicio(Request $request)
+    {
+        $persona = Persona::find($request->personaid); 
+        
+        if (!$persona) {
+            return response()->json(['error' => 'No se encontró la persona'], 404);
+        }
+
+        $persona->tramites()->attach($request->tramiteid); 
+        $data = [
+            'message' => 'Relacionado Correctamente.', 
+            'persona' => $persona
+        ]; 
+
+        return response()->json($data); 
+    }
+    */
+
+    public function agregarServicio(Request $request)
+    {
+        $persona = Persona::find($request->personaid); 
+        
+        if (!$persona) {
+            return response()->json(['error' => 'No se encontró la persona'], 404);
+        }
+
+        $tramite = Tramite::find($request->tramiteid);
+
+        if (!$tramite) {
+            return response()->json(['error' => 'No se encontró el trámite'], 404);
+        }
+
+        $persona->tramites()->attach($tramite->id); 
+
+        $data = [
+            'message' => 'Relacionado Correctamente.', 
+            'persona' => $persona,
+            'tramite' => $tramite
+        ]; 
+
+        return response()->json($data); 
+    }
 }
