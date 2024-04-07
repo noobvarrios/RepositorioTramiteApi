@@ -1,0 +1,61 @@
+LLENAR DATOS. 
+
+mysql> describe personas;
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| id         | bigint unsigned | NO   | PRI | NULL    | auto_increment |
+| nombre     | varchar(255)    | NO   |     | NULL    |                |
+| correo     | varchar(255)    | NO   | UNI | NULL    |                |
+| telefono   | varchar(255)    | YES  |     | NULL    |                |
+| direccion  | varchar(255)    | YES  |     | NULL    |                |
+| created_at | timestamp       | YES  |     | NULL    |                |
+| updated_at | timestamp       | YES  |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+
+#######################################
+INSERT INTO personas (nombre, correo, telefono, direccion, created_at, updated_at)
+VALUES
+    ('Juan Pérez', 'juan@example.com', '123456789', 'Calle Principal 123', NOW(), NOW()),
+    ('María García', 'maria@example.com', '987654321', 'Avenida Central 456', NOW(), NOW()),
+    ('José Rodríguez', 'jose@example.com', NULL, 'Avenida Principal 789', NOW(), NOW()),
+    ('Ana Martínez', 'ana@example.com', '555555555', 'Calle Secundaria 456', NOW(), NOW()),
+    ('Carlos López', 'carlos@example.com', NULL, 'Boulevard Principal 789', NOW(), NOW()),
+    ('Laura Pérez', 'laura@example.com', '666666666', 'Avenida Central 789', NOW(), NOW()),
+    ('Pedro Gómez', 'pedro@example.com', '777777777', 'Calle Primera 123', NOW(), NOW()),
+    ('Sofía Hernández', 'sofia@example.com', NULL, 'Calle Secundaria 789', NOW(), NOW()),
+    ('Luisa González', 'luisa@example.com', '888888888', 'Boulevard Central 456', NOW(), NOW()),
+    ('Javier Díaz', 'javier@example.com', '999999999', 'Avenida Principal 123', NOW(), NOW());
+#######################################
+
+mysql> describe tramites;
++--------------+-----------------+------+-----+---------+----------------+
+| Field        | Type            | Null | Key | Default | Extra          |
++--------------+-----------------+------+-----+---------+----------------+
+| id           | bigint unsigned | NO   | PRI | NULL    | auto_increment |
+| nombre       | varchar(255)    | NO   |     | NULL    |                |
+| descripcion  | varchar(255)    | YES  |     | NULL    |                |
+| precio       | double          | YES  |     | NULL    |                |
+| estado       | varchar(255)    | NO   |     | NULL    |                |
+| fecha_inicio | date            | YES  |     | NULL    |                |
+| fecha_fin    | date            | YES  |     | NULL    |                |
+| created_at   | timestamp       | YES  |     | NULL    |                |
+| updated_at   | timestamp       | YES  |     | NULL    |                |
++--------------+-----------------+------+-----+---------+----------------+
+9 rows in set (0.00 sec)
+
+########################################
+INSERT INTO tramites (nombre, descripcion, precio, estado, fecha_inicio, fecha_fin, created_at, updated_at)
+VALUES
+    ('INE', 'Identificación oficial mexicana.', 150.00, 'Aceptado', NOW(), NOW() + INTERVAL 1 MONTH, NOW(), NOW()),
+    ('Licencia de Conducir', 'Permiso para conducir vehículos.', 200.00, 'Rechazado', NOW(), NOW() + INTERVAL 1 MONTH, NOW(), NOW()),
+    ('Acta de Nacimiento', 'Documento que certifica el nacimiento de una persona.', 100.00, 'Pendiente', NOW(), NOW() + INTERVAL 1 MONTH, NOW(), NOW()),
+    ('Acta de Matrimonio', 'Certificado legal que prueba un matrimonio.', 250.00, 'Aceptado', NOW(), NOW() + INTERVAL 1 MONTH, NOW(), NOW()),
+    ('Acta de Defunción', 'Documento que certifica la muerte de una persona.', 120.00, 'Rechazado', NOW(), NOW() + INTERVAL 1 MONTH, NOW(), NOW()),
+    ('CURP', 'Clave Única de Registro de Población.', 50.00, 'Pendiente', NOW(), NOW() + INTERVAL 1 MONTH, NOW(), NOW()),
+    ('Pasaporte', 'Documento que permite viajar internacionalmente.', 300.00, 'Aceptado', NOW(), NOW() + INTERVAL 1 MONTH, NOW(), NOW()),
+    ('RFC', 'Registro Federal de Contribuyentes.', 80.00, 'Rechazado', NOW(), NOW() + INTERVAL 1 MONTH, NOW(), NOW()),
+    ('Carta de Antecedentes Penales', 'Documento que certifica la inexistencia de antecedentes penales.', 180.00, 'Pendiente', NOW(), NOW() + INTERVAL 1 MONTH, NOW(), NOW()),
+    ('INE', 'Identificación oficial mexicana.', 150.00, 'Aceptado', NOW(), NOW() + INTERVAL 1 MONTH, NOW(), NOW());
+
+########################################

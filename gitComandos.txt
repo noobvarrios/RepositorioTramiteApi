@@ -1,0 +1,589 @@
+HISTORIAL: 
+
+  297  git init
+  298  git add README.md
+  299  git status
+  300  git commit -m "Primer Commit"
+  301  git branch -m main
+  302  git remote add origin https://github.com/noobvarrios/RepositorioTramiteApi.git
+  303  git push -u origin main
+  304  git status
+  305  git add .
+  306  git status
+  307  git comit -m 'Primer subida de archivos - Barrios1'
+  308  git commit -m 'Primer subida de archivos - Barrios1'
+  309  git status
+  310  git push
+  311  git status
+  312  git branch RamaTrabajo
+  313  git checkout RamaTrabajo
+  314  git add .
+  315  git status
+  316  git status
+  317  git add .
+  318  git commit -m "CRUD persona completado - Barrios"
+  319  git push origin RamaTrabajo
+  320  git status
+  321  git status
+  322  git add .
+  323  git -m commit "CRUD tramites completado"
+  324  git commit -m "CRUD tramites completado"
+  325  git push origin RamaTrabajo
+  326  git status
+  327  git status;
+  328  git add .
+  329  git commit -m "Relacion Persona y Tramite hecha. "
+  330  git push origin RamaTrabajo
+  331  git status
+  332  git add .
+  333  git commit -m "Corecciones para cuando no encuentre objetos. Falta Migraciones automaticas. "
+  334  git push origin RamaTrabajo
+  335  git checkout main
+  336  git merge RamaTrabajo
+  337  git status
+  338  git status
+  339  git add .
+  340  git commit -m "Migraciones con datos Default, se supone que funciona JADKADB"
+  341  git push origin main
+  342  git status
+  343  HISTORY
+  344  history
+
+
+
+
+
+########################################################################################################
+
+
+
+
+CONSOLA COMPLETA: 
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI
+$ git init
+Initialized empty Git repository in C:/laragon/www/TramitesAPI/.git/
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (master)
+$ git add README.md
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .editorconfig
+        .env.example
+        .gitattributes
+        .gitignore
+        app/
+        artisan
+        bootstrap/
+        composer.json
+        composer.lock
+        config/
+        database/
+        package.json
+        phpunit.xml
+        public/
+        resources/
+        routes/
+        storage/
+        tests/
+        vite.config.js
+
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (master)
+$ git commit -m "Primer Commit"
+[master (root-commit) 82fdd2a] Primer Commit
+ 1 file changed, 66 insertions(+)
+ create mode 100644 README.md
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (master)
+$ git branch -m main
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git remote add origin https://github.com/noobvarrios/RepositorioTramiteApi.git
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.85 KiB | 474.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/noobvarrios/RepositorioTramiteApi.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .editorconfig
+        .env.example
+        .gitattributes
+        .gitignore
+        app/
+        artisan
+        bootstrap/
+        composer.json
+        composer.lock
+        config/
+        database/
+        package.json
+        phpunit.xml
+        public/
+        resources/
+        routes/
+        storage/
+        tests/
+        vite.config.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git add .
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .editorconfig
+        new file:   .env.example
+        new file:   .gitattributes
+        new file:   .gitignore
+        new file:   app/Console/Kernel.php
+        new file:   app/Exceptions/Handler.php
+        new file:   app/Http/Controllers/Controller.php
+        new file:   app/Http/Controllers/PersonaController.php
+        new file:   app/Http/Controllers/TramiteController.php
+        new file:   app/Http/Kernel.php
+        new file:   app/Http/Middleware/Authenticate.php
+        new file:   app/Http/Middleware/EncryptCookies.php
+        new file:   app/Http/Middleware/PreventRequestsDuringMaintenance.php
+        new file:   app/Http/Middleware/RedirectIfAuthenticated.php
+        new file:   app/Http/Middleware/TrimStrings.php
+        new file:   app/Http/Middleware/TrustHosts.php
+        new file:   app/Http/Middleware/TrustProxies.php
+        new file:   app/Http/Middleware/ValidateSignature.php
+        new file:   app/Http/Middleware/VerifyCsrfToken.php
+        new file:   app/Models/Persona.php
+        new file:   app/Models/Tramite.php
+        new file:   app/Models/User.php
+        new file:   app/Providers/AppServiceProvider.php
+        new file:   app/Providers/AuthServiceProvider.php
+        new file:   app/Providers/BroadcastServiceProvider.php
+        new file:   app/Providers/EventServiceProvider.php
+        new file:   app/Providers/RouteServiceProvider.php
+        new file:   artisan
+        new file:   bootstrap/app.php
+        new file:   bootstrap/cache/.gitignore
+        new file:   composer.json
+        new file:   composer.lock
+        new file:   config/app.php
+        new file:   config/auth.php
+        new file:   config/broadcasting.php
+        new file:   config/cache.php
+        new file:   config/cors.php
+        new file:   config/database.php
+        new file:   config/filesystems.php
+        new file:   config/hashing.php
+        new file:   config/logging.php
+        new file:   config/mail.php
+        new file:   config/queue.php
+        new file:   config/sanctum.php
+        new file:   config/services.php
+        new file:   config/session.php
+        new file:   config/view.php
+        new file:   database/.gitignore
+        new file:   database/factories/UserFactory.php
+        new file:   database/migrations/2014_10_12_000000_create_users_table.php
+        new file:   database/migrations/2014_10_12_100000_create_password_reset_tokens_table.php
+        new file:   database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+        new file:   database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php
+        new file:   database/migrations/2024_04_06_180929_create_personas_table.php
+        new file:   database/migrations/2024_04_06_180937_create_tramites_table.php
+        new file:   database/migrations/2024_04_06_181004_create_persona_tramite_table.php
+        new file:   database/seeders/DatabaseSeeder.php
+        new file:   package.json
+        new file:   phpunit.xml
+        new file:   public/.htaccess
+        new file:   public/favicon.ico
+        new file:   public/index.php
+        new file:   public/robots.txt
+        new file:   resources/css/app.css
+        new file:   resources/js/app.js
+        new file:   resources/js/bootstrap.js
+        new file:   resources/views/welcome.blade.php
+        new file:   routes/api.php
+        new file:   routes/channels.php
+        new file:   routes/console.php
+        new file:   routes/web.php
+        new file:   storage/app/.gitignore
+        new file:   storage/app/public/.gitignore
+        new file:   storage/framework/.gitignore
+        new file:   storage/framework/cache/.gitignore
+        new file:   storage/framework/cache/data/.gitignore
+        new file:   storage/framework/sessions/.gitignore
+        new file:   storage/framework/testing/.gitignore
+        new file:   storage/framework/views/.gitignore
+        new file:   storage/logs/.gitignore
+        new file:   tests/CreatesApplication.php
+        new file:   tests/Feature/ExampleTest.php
+        new file:   tests/TestCase.php
+        new file:   tests/Unit/ExampleTest.php
+        new file:   vite.config.js
+
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git commit -m 'Primer subida de archivos - Barrios1'
+[main fad6170] Primer subida de archivos - Barrios1
+ 85 files changed, 11407 insertions(+)
+ create mode 100644 .editorconfig
+ create mode 100644 .env.example
+ create mode 100644 .gitattributes
+ create mode 100644 .gitignore
+ create mode 100644 app/Console/Kernel.php
+ create mode 100644 app/Exceptions/Handler.php
+ create mode 100644 app/Http/Controllers/Controller.php
+ create mode 100644 app/Http/Controllers/PersonaController.php
+ create mode 100644 app/Http/Controllers/TramiteController.php
+ create mode 100644 app/Http/Kernel.php
+ create mode 100644 app/Http/Middleware/Authenticate.php
+ create mode 100644 app/Http/Middleware/EncryptCookies.php
+ create mode 100644 app/Http/Middleware/PreventRequestsDuringMaintenance.php
+ create mode 100644 app/Http/Middleware/RedirectIfAuthenticated.php
+ create mode 100644 app/Http/Middleware/TrimStrings.php
+ create mode 100644 app/Http/Middleware/TrustHosts.php
+ create mode 100644 app/Http/Middleware/TrustProxies.php
+ create mode 100644 app/Http/Middleware/ValidateSignature.php
+ create mode 100644 app/Http/Middleware/VerifyCsrfToken.php
+ create mode 100644 app/Models/Persona.php
+ create mode 100644 app/Models/Tramite.php
+ create mode 100644 app/Models/User.php
+ create mode 100644 app/Providers/AppServiceProvider.php
+ create mode 100644 app/Providers/AuthServiceProvider.php
+ create mode 100644 app/Providers/BroadcastServiceProvider.php
+ create mode 100644 app/Providers/EventServiceProvider.php
+ create mode 100644 app/Providers/RouteServiceProvider.php
+ create mode 100644 artisan
+ create mode 100644 bootstrap/app.php
+ create mode 100644 bootstrap/cache/.gitignore
+ create mode 100644 composer.json
+ create mode 100644 composer.lock
+ create mode 100644 config/app.php
+ create mode 100644 config/auth.php
+ create mode 100644 config/broadcasting.php
+ create mode 100644 config/cache.php
+ create mode 100644 config/cors.php
+ create mode 100644 config/database.php
+ create mode 100644 config/filesystems.php
+ create mode 100644 config/hashing.php
+ create mode 100644 config/logging.php
+ create mode 100644 config/mail.php
+ create mode 100644 config/queue.php
+ create mode 100644 config/sanctum.php
+ create mode 100644 config/services.php
+ create mode 100644 config/session.php
+ create mode 100644 config/view.php
+ create mode 100644 database/.gitignore
+ create mode 100644 database/factories/UserFactory.php
+ create mode 100644 database/migrations/2014_10_12_000000_create_users_table.php
+ create mode 100644 database/migrations/2014_10_12_100000_create_password_reset_tokens_table.php
+ create mode 100644 database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+ create mode 100644 database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php
+ create mode 100644 database/migrations/2024_04_06_180929_create_personas_table.php
+ create mode 100644 database/migrations/2024_04_06_180937_create_tramites_table.php
+ create mode 100644 database/migrations/2024_04_06_181004_create_persona_tramite_table.php
+ create mode 100644 database/seeders/DatabaseSeeder.php
+ create mode 100644 package.json
+ create mode 100644 phpunit.xml
+ create mode 100644 public/.htaccess
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/index.php
+ create mode 100644 public/robots.txt
+ create mode 100644 resources/css/app.css
+ create mode 100644 resources/js/app.js
+ create mode 100644 resources/js/bootstrap.js
+ create mode 100644 resources/views/welcome.blade.php
+ create mode 100644 routes/api.php
+ create mode 100644 routes/channels.php
+ create mode 100644 routes/console.php
+ create mode 100644 routes/web.php
+ create mode 100644 storage/app/.gitignore
+ create mode 100644 storage/app/public/.gitignore
+ create mode 100644 storage/framework/.gitignore
+ create mode 100644 storage/framework/cache/.gitignore
+ create mode 100644 storage/framework/cache/data/.gitignore
+ create mode 100644 storage/framework/sessions/.gitignore
+ create mode 100644 storage/framework/testing/.gitignore
+ create mode 100644 storage/framework/views/.gitignore
+ create mode 100644 storage/logs/.gitignore
+ create mode 100644 tests/CreatesApplication.php
+ create mode 100644 tests/Feature/ExampleTest.php
+ create mode 100644 tests/TestCase.php
+ create mode 100644 tests/Unit/ExampleTest.php
+ create mode 100644 vite.config.js
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git push
+Enumerating objects: 109, done.
+Counting objects: 100% (109/109), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (92/92), done.
+Writing objects: 100% (108/108), 72.80 KiB | 1.87 MiB/s, done.
+Total 108 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), done.
+To https://github.com/noobvarrios/RepositorioTramiteApi.git
+   82fdd2a..fad6170  main -> main
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git branch RamaTrabajo
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git checkout RamaTrabajo
+Switched to branch 'RamaTrabajo'
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git add .
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git status
+On branch RamaTrabajo
+nothing to commit, working tree clean
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git status
+On branch RamaTrabajo
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app/Http/Controllers/PersonaController.php
+        modified:   app/Http/Controllers/TramiteController.php
+        modified:   routes/api.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git add .
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git commit -m "CRUD persona completado - Barrios"
+[RamaTrabajo 1ee632a] CRUD persona completado - Barrios
+ 3 files changed, 62 insertions(+), 29 deletions(-)
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git push origin RamaTrabajo
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.60 KiB | 821.00 KiB/s, done.
+Total 9 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+remote:
+remote: Create a pull request for 'RamaTrabajo' on GitHub by visiting:
+remote:      https://github.com/noobvarrios/RepositorioTramiteApi/pull/new/RamaTrabajo
+remote:
+To https://github.com/noobvarrios/RepositorioTramiteApi.git
+ * [new branch]      RamaTrabajo -> RamaTrabajo
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git status
+On branch RamaTrabajo
+nothing to commit, working tree clean
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git status
+On branch RamaTrabajo
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app/Http/Controllers/TramiteController.php
+        modified:   routes/api.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git add .
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git commit -m "CRUD tramites completado"
+[RamaTrabajo e1397af] CRUD tramites completado
+ 2 files changed, 59 insertions(+), 15 deletions(-)
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git push origin RamaTrabajo
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.48 KiB | 1.48 MiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/noobvarrios/RepositorioTramiteApi.git
+   1ee632a..e1397af  RamaTrabajo -> RamaTrabajo
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git status
+On branch RamaTrabajo
+nothing to commit, working tree clean
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git status;
+On branch RamaTrabajo
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app/Http/Controllers/PersonaController.php
+        modified:   routes/api.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git add .
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git commit -m "Relacion Persona y Tramite hecha. "
+[RamaTrabajo d85e3a0] Relacion Persona y Tramite hecha.
+ 2 files changed, 61 insertions(+), 2 deletions(-)
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git push origin RamaTrabajo
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.11 KiB | 1.11 MiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/noobvarrios/RepositorioTramiteApi.git
+   e1397af..d85e3a0  RamaTrabajo -> RamaTrabajo
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git status
+On branch RamaTrabajo
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app/Http/Controllers/PersonaController.php
+        modified:   app/Http/Controllers/TramiteController.php
+        modified:   routes/api.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git add .
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git commit -m "Corecciones para cuando no encuentre objetos. Falta Migraciones automaticas. "
+[RamaTrabajo 08ac58b] Corecciones para cuando no encuentre objetos. Falta Migraciones automaticas.
+ 3 files changed, 19 insertions(+), 40 deletions(-)
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git push origin RamaTrabajo
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.38 KiB | 1.38 MiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 4 local objects.
+To https://github.com/noobvarrios/RepositorioTramiteApi.git
+   d85e3a0..08ac58b  RamaTrabajo -> RamaTrabajo
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (RamaTrabajo)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git merge RamaTrabajo
+Updating fad6170..08ac58b
+Fast-forward
+ app/Http/Controllers/PersonaController.php | 97 +++++++++++++++++++++++++-----
+ app/Http/Controllers/TramiteController.php | 75 +++++++++++++++++------
+ routes/api.php                             | 17 +++++-
+ 3 files changed, 152 insertions(+), 37 deletions(-)
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   database/migrations/2024_04_06_180929_create_personas_table.php
+        modified:   database/migrations/2024_04_06_180937_create_tramites_table.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git add .
+
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git commit -m "Migraciones con datos Default, se supone que funciona JADKADB"
+[main e909092] Migraciones con datos Default, se supone que funciona JADKADB
+ 2 files changed, 35 insertions(+)
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git push origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.91 KiB | 977.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/noobvarrios/RepositorioTramiteApi.git
+   fad6170..e909092  main -> main
+
+Osadi@DESKTOP-C3OS9R4 MINGW64 /c/laragon/www/TramitesAPI (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+
+me gusta mucho github
